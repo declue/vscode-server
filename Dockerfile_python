@@ -1,0 +1,9 @@
+FROM ghcr.io/declue/vscode-server:python
+
+RUN code-server --install-extension ms-python.python
+RUN code-server --install-extension esbenp.prettier-vscode
+RUN code-server --install-extension GitHub.vscode-pull-request-githu
+RUN code-server --install-extension mhutchie.git-graph
+RUN code-server --install-extension PKief.material-icon-theme
+RUN code-server --install-extension redhat.vscode-xml
+RUN code-server --install-extension redhat.vscode-yaml

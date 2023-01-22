@@ -1,0 +1,15 @@
+apiVersion: v2
+name: vscode-default
+description: >
+  extension이 없는 기본 vs-code
+  
+home: https://github.com/declue/vscode-server
+type: application
+version: 0.1.0
+appVersion: "4.9.1"
+keywords:
+  - vscode
+  - webide
+maintainers:
+  - name: declue
+    email: bkperio@gmail.com
