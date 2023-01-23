@@ -1,21 +1,22 @@
 apiVersion: v1
 entries:
-  vscode-default:
+  vscode-python:
   - apiVersion: v2
     appVersion: 4.9.1
-    created: "2023-01-23T00:17:31.309498+09:00"
-    description: 'extension이 없는 기본 vs-code '
-    digest: 25e7a276e3e17483a4e81f9b930f933456f4b3aae8ac076100d794a29d3082a4
+    created: "2023-01-23T16:32:30.164443911+09:00"
+    description: 'python 기반 vs-code '
+    digest: 465bbce3058548b70ea2027c7c7ed564cf85168ae6a41c8a9c6cb0ca39fec054
     home: https://github.com/declue/vscode-server
     keywords:
     - vscode
     - webide
+    - python
     maintainers:
     - email: bkperio@gmail.com
       name: declue
-    name: vscode-default
+    name: vscode-python
     type: application
     urls:
-    - vscode-default-0.1.0.tgz
+    - vscode-python-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-23T00:17:31.307858+09:00"
+generated: "2023-01-23T16:32:30.164077235+09:00"

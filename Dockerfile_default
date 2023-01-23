@@ -1,10 +1,11 @@
 FROM ghcr.io/declue/docker_ubuntu:20.04
 
-RUN apt-get update
+RUN apt-get update && apt-get install -y ca-certificates --no-install-recommends
+RUN update-ca-certificates
 
 # 필수 패키지 설치
-RUN apt-get install -y dumb-init zsh htop locales man nano git procps openssh-client sudo jq openssl bash-completion dnsutils lsb-release cscope
-RUN apt-get install -y python3 python3-pip python3-dev build-essential python-is-python3
+RUN apt-get install -y dumb-init zsh htop locales man nano git procps openssh-client sudo jq openssl bash-completion dnsutils lsb-release cscope libsecret-1-0
+RUN apt-get install -y python3 python3-pip python3-dev build-essential python-is-python3 python3-venv
 RUN apt-get install -y openjdk-11-jdk
 
 
@@ -18,10 +19,12 @@ RUN chown developer:developer /home/developer/workspace -R
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers;
 
 
+ARG ARCH=amd64
+ENV ARCH=$ARCH
 # fluxid 설치 (2023-01-18자로 최신 버전은 0.5.1)
 RUN USER=docker && \
     GROUP=docker && \
-    curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.5.1/fixuid-0.5.1-linux-amd64.tar.gz | tar -C /usr/local/bin -xzf - && \
+    curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.5.1/fixuid-0.5.1-linux-${ARCH}.tar.gz | tar -C /usr/local/bin -xzf - && \
     chown root:root /usr/local/bin/fixuid && \
     chmod 4755 /usr/local/bin/fixuid && \
     mkdir -p /etc/fixuid && \
@@ -30,8 +33,7 @@ RUN USER=docker && \
 
 # install code-server 4.9.1 (2023-01-18 최신 버전)
 ENV CODE_SERVER_VERSION=4.9.1
-ENV ARCH=amd64
-RUN curl -sSOL https://github.com/coder/code-server/releases/download/v${CODE_SERVER_VERSION}/code-server_${CODE_SERVER_VERSION}_amd64.deb
+RUN curl -sSOL https://github.com/coder/code-server/releases/download/v${CODE_SERVER_VERSION}/code-server_${CODE_SERVER_VERSION}_${ARCH}.deb
 RUN sudo dpkg -i code-server_${CODE_SERVER_VERSION}_${ARCH}.deb
 
 # default home 

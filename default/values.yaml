@@ -50,7 +50,6 @@ ingress:
 
 persistence:
   enabled: true
-  storageClass: default 
   accessMode: ReadWriteMany 
   size: 1Gi
 

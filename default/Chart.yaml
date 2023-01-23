@@ -4,6 +4,7 @@ description: >
   extension이 없는 기본 vs-code
   
 home: https://github.com/declue/vscode-server
+icon: https://code.visualstudio.com//favicon.ico
 type: application
 version: 0.1.0
 appVersion: "4.9.1"

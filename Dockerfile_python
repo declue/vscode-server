@@ -1,9 +1,21 @@
 FROM ghcr.io/declue/vscode-server:python
 
+RUN apt-get update && apt-get install -y ca-certificates --no-install-recommends
+
 RUN code-server --install-extension ms-python.python
 RUN code-server --install-extension esbenp.prettier-vscode
-RUN code-server --install-extension GitHub.vscode-pull-request-githu
+RUN code-server --install-extension GitHub.vscode-pull-request-github
 RUN code-server --install-extension mhutchie.git-graph
 RUN code-server --install-extension PKief.material-icon-theme
 RUN code-server --install-extension redhat.vscode-xml
 RUN code-server --install-extension redhat.vscode-yaml
+RUN code-server --install-extension indent-rainbow
+RUN code-server --install-extension isort
+RUN code-server --install-extension vscode-github
+RUN code-server --install-extension vsc-python-indent
+RUN code-server --install-extension donjayamanne.python-environment-manager
+RUN code-server --install-extension ms-toolsai.jupyter
+RUN code-server --install-extension ms-toolsai.jupyter-keymap
+RUN code-server --install-extension ms-toolsai.jupyter-renderers
+RUN code-server --install-extension ms-toolsai.vscode-jupyter-cell-tags
+RUN code-server --install-extension ms-toolsai.vscode-jupyter-slideshow

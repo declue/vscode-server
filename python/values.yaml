@@ -50,17 +50,11 @@ ingress:
 
 persistence:
   enabled: true
-  storageClass: default 
   accessMode: ReadWriteMany 
   size: 1Gi
 
 secret:
   password: changeit
-
-configmap:
-  extensions: >
-ms-python.python
-
 
 resources: {}
   # limits:

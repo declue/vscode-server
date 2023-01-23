@@ -1,0 +1,4 @@
+# vscode 
+
+# default password
+- changeit
