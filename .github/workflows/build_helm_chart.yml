@@ -38,6 +38,8 @@ jobs:
         run: helm package default
       - name: Helm Package - python
         run: helm package python
+      - name: Helm Package - nodejs
+        run: helm package nodejs
       - name: Helm Index
         run: helm repo index .
       - name: Setup Pages

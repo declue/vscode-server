@@ -72,7 +72,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        tag: [python]
+        tag: [python, nodejs]
     runs-on: ${{ matrix.os }}
     permissions:
       contents: read

@@ -1,11 +1,30 @@
 apiVersion: v1
 entries:
+  vscode-nodejs:
+  - apiVersion: v2
+    appVersion: 4.9.1
+    created: "2023-01-25T01:02:27.820213399+09:00"
+    description: 'vs-code for nodejs '
+    digest: b73a704b950165d037f90111ce6db055792fe4423ebac7a360aec944973b3dfe
+    home: https://github.com/declue/vscode-server
+    keywords:
+    - vscode
+    - webide
+    - nodejs
+    maintainers:
+    - email: bkperio@gmail.com
+      name: declue
+    name: vscode-nodejs
+    type: application
+    urls:
+    - vscode-nodejs-0.1.0.tgz
+    version: 0.1.0
   vscode-python:
   - apiVersion: v2
     appVersion: 4.9.1
-    created: "2023-01-23T16:32:30.164443911+09:00"
+    created: "2023-01-25T01:02:27.820460963+09:00"
     description: 'python 기반 vs-code '
-    digest: 465bbce3058548b70ea2027c7c7ed564cf85168ae6a41c8a9c6cb0ca39fec054
+    digest: 64654342bd298a651b8bc72e2b714aec41ef09f6d669447ab46dcac07b342e46
     home: https://github.com/declue/vscode-server
     keywords:
     - vscode
@@ -19,4 +38,4 @@ entries:
     urls:
     - vscode-python-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-23T16:32:30.164077235+09:00"
+generated: "2023-01-25T01:02:27.819875258+09:00"

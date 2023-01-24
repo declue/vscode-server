@@ -1,0 +1,10 @@
+ritwickdey.LiveServer
+formulahendry.code-runner
+dbaeumer.vscode-eslint
+formulahendry.auto-close-tag
+HookyQR.beautify
+ecmel.vscode-html-css
+christian-kohler.npm-intellisense
+eg2.vscode-npm-script
+DotJoshJohnson.xml
+wix.vscode-import-cost

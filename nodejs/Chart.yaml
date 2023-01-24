@@ -1,7 +1,7 @@
 apiVersion: v2
-name: vscode-python
+name: vscode-nodejs
 description: >
-  vs-code for python
+  vs-code for nodejs
   
 home: https://github.com/declue/vscode-server
 type: application
@@ -10,7 +10,7 @@ appVersion: "4.9.1"
 keywords:
   - vscode
   - webide
-  - python
+  - nodejs
 maintainers:
   - name: declue
     email: bkperio@gmail.com
