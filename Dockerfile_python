@@ -1,6 +1,8 @@
 FROM ghcr.io/declue/vscode-server:default
 
-RUN apt-get update && apt-get install -y ca-certificates --no-install-recommends
+USER developer
 ADD python-extensions.txt /tmp/python-extensions.txt
 RUN cat /tmp/python-extensions.txt | while read -r line; do code-server --install-extension $line; done
+USER root
+
 
